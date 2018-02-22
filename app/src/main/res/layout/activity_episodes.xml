@@ -2,7 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_repository_search"
+    android:id="@+id/activity_show_episodes"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lovoo.android.ui.episodes.EpisodesActivity">
@@ -15,30 +15,21 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_repository_search"
-        app:layout_constraintRight_toRightOf="@+id/activity_repository_search"
-        app:layout_constraintTop_toTopOf="@+id/activity_repository_search">
-
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="18sp" />
-
-    </android.support.v7.widget.Toolbar>
+        app:layout_constraintLeft_toLeftOf="@+id/activity_show_episodes"
+        app:layout_constraintRight_toRightOf="@+id/activity_show_episodes"
+        app:layout_constraintTop_toTopOf="@+id/activity_show_episodes" />
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view_repos"
+        android:id="@+id/recycler_view_episodes"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:clipToPadding="false"
         android:paddingBottom="8dp"
         android:scrollbars="vertical"
         app:layoutManager="android.support.v7.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_repository_search"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_repository_search"
-        app:layout_constraintRight_toRightOf="@+id/activity_repository_search"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_show_episodes"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_show_episodes"
+        app:layout_constraintRight_toRightOf="@+id/activity_show_episodes"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:listitem="@layout/episode_list_item" />
 
@@ -50,9 +41,9 @@
         android:layout_marginBottom="16dp"
         android:layout_marginTop="16dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="@+id/activity_repository_search"
-        app:layout_constraintLeft_toLeftOf="@+id/activity_repository_search"
-        app:layout_constraintRight_toRightOf="@+id/activity_repository_search"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_show_episodes"
+        app:layout_constraintLeft_toLeftOf="@+id/activity_show_episodes"
+        app:layout_constraintRight_toRightOf="@+id/activity_show_episodes"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:visibility="visible" />
 

@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Lovoo</string>
 
+    <!-- Episodes screen strings -->
+    <string name="toolbar_episode_screen_title">Episodes</string>
+
     <!-- General strings -->
     <string name="something_went_wrong">Oops! Something went wrong</string>
 

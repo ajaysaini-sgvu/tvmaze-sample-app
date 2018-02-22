@@ -15,6 +15,6 @@ class EpisodesActivity : BaseActivity() {
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
         // set the title of the toolbar
-        //toolbar_title.text = getString(R.string.toolbar_search_repository_title)
+        toolbar.title = getString(R.string.toolbar_episode_screen_title)
     }
 }
