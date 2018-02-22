@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Lovoo</string>
+
+    <!-- General strings -->
+    <string name="something_went_wrong">Oops! Something went wrong</string>
+
 </resources>
