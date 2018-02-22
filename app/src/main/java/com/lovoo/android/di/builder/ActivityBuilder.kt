@@ -16,7 +16,7 @@
 
 package com.lovoo.android.di.builder
 
-import com.lovoo.android.ui.episodes.EpisodesActivity
+import com.lovoo.android.ui.episode.EpisodeActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -24,6 +24,6 @@ import dagger.android.ContributesAndroidInjector
 abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
-    abstract fun bindEpisodesActivity(): EpisodesActivity
+    abstract fun bindEpisodesActivity(): EpisodeActivity
 
 }

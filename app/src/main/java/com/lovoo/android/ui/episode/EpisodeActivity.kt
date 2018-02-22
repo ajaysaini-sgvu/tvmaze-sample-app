@@ -1,11 +1,11 @@
-package com.lovoo.android.ui.episodes
+package com.lovoo.android.ui.episode
 
 import android.os.Bundle
 import com.lovoo.android.R
 import com.lovoo.android.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_episodes.*
 
-class EpisodesActivity : BaseActivity() {
+class EpisodeActivity : BaseActivity(), EpisodesMvpView {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

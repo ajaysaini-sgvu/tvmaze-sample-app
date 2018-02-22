@@ -16,6 +16,13 @@
 
 package com.lovoo.android.data.remote
 
+import com.lovoo.android.data.model.episode.EpisodeResponse
+import io.reactivex.Observable
 import javax.inject.Inject
 
-class ApiHelperImpl @Inject constructor(private val restApi: RestApi) : ApiHelper
+class ApiHelperImpl @Inject constructor(private val restApi: RestApi) : ApiHelper {
+
+    override fun getEpisodeList(id: Int): Observable<EpisodeResponse>? {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+}

@@ -16,4 +16,9 @@
 
 package com.lovoo.android.data.remote
 
-interface ApiHelper
+import com.lovoo.android.data.model.episode.EpisodeResponse
+import io.reactivex.Observable
+
+interface ApiHelper {
+    fun getEpisodeList(id: Int): Observable<EpisodeResponse>?
+}

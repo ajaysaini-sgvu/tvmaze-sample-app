@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Ajay Saini
+ * Copyright 2018 Ajay Saini
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,4 +16,17 @@
 
 package com.lovoo.android.data.remote
 
-interface RestApi
+import com.lovoo.android.data.model.episode.EpisodeResponse
+import com.lovoo.android.data.model.show.ShowResponse
+import io.reactivex.Observable
+import retrofit2.http.GET
+import retrofit2.http.Path
+
+interface RestApi {
+
+    @GET("/shows/{id}/episodes")
+    fun getEpisodeList(@Path("id") id: Int?, @Path("repo") repo: String?): Observable<List<EpisodeResponse>>
+
+    @GET("/shows/{id}")
+    fun getShowDetail(@Path("id") id: Int?) : Observable<ShowResponse>
+}
