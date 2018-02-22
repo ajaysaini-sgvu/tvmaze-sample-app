@@ -19,7 +19,7 @@ package com.lovoo.android.di.module
 import android.content.Context
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
-import com.lovoo.android.LovoolApplication
+import com.lovoo.android.LovooApplication
 import com.lovoo.android.data.AppDataManager
 import com.lovoo.android.data.DataManager
 import com.lovoo.android.data.pref.AppPreferencesHelper
@@ -38,10 +38,10 @@ class HelpersModule {
 
     @Provides
     @Singleton
-    fun providesSharedPreferences(application: LovoolApplication): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(application)
+    fun providesSharedPreferences(application: LovooApplication): SharedPreferences = PreferenceManager.getDefaultSharedPreferences(application)
 
     @Provides
-    fun provideContext(app: LovoolApplication): Context = app.applicationContext
+    fun provideContext(app: LovooApplication): Context = app.applicationContext
 
     @Singleton
     @Provides

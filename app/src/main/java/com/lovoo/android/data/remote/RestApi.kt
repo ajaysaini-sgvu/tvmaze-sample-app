@@ -25,7 +25,7 @@ import retrofit2.http.Path
 interface RestApi {
 
     @GET("/shows/{id}/episodes")
-    fun getEpisodeList(@Path("id") id: Int?, @Path("repo") repo: String?): Observable<List<EpisodeResponse>>
+    fun getEpisodeList(@Path("id") id: Int?): Observable<List<EpisodeResponse>>
 
     @GET("/shows/{id}")
     fun getShowDetail(@Path("id") id: Int?) : Observable<ShowResponse>

@@ -16,7 +16,7 @@
 
 package com.lovoo.android.di.component
 
-import com.lovoo.android.LovoolApplication
+import com.lovoo.android.LovooApplication
 import com.lovoo.android.di.builder.ActivityBuilder
 import com.lovoo.android.di.module.ActivityModule
 import com.lovoo.android.di.module.HelpersModule
@@ -31,13 +31,13 @@ import javax.inject.Singleton
 @Singleton
 interface AppComponent {
 
-    fun inject(app: LovoolApplication)
+    fun inject(app: LovooApplication)
 
     @Component.Builder
     interface Builder {
 
         @BindsInstance
-        fun application(application: LovoolApplication): Builder
+        fun application(application: LovooApplication): Builder
 
         fun build(): AppComponent
     }
