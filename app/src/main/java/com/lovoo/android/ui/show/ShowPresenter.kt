@@ -1,28 +1,28 @@
-package com.lovoo.android.ui.episode
+package com.lovoo.android.ui.show
 
 import com.lovoo.android.data.DataManager
-import com.lovoo.android.data.model.episode.EpisodeResponse
+import com.lovoo.android.data.model.show.ShowResponse
 import com.lovoo.android.data.remote.CallbackWrapper
 import com.lovoo.android.ui.base.BasePresenter
 import com.lovoo.android.utils.rx.SchedulerProvider
 import javax.inject.Inject
 
-class EpisodePresenter<V : EpisodesMvpView> @Inject constructor(private val dm: DataManager, private val scheduler: SchedulerProvider) : BasePresenter<V>(dm, scheduler), EpisodeMvpPresenter<V> {
+class ShowPresenter<V : ShowMvpView> @Inject constructor(private val dm: DataManager, private val scheduler: SchedulerProvider) : BasePresenter<V>(dm, scheduler), ShowMvpPresenter<V> {
 
     @Suppress("PARAMETER_NAME_CHANGED_ON_OVERRIDE")
-    override fun loadEpisode(id: Int) {
+    override fun loadShow(id: Int) {
         // display progress bar
         getMvpView()!!.showLoading()
 
-        getDataManager()!!.getEpisodeList(id)!!.subscribeOn(scheduler.io()).observeOn(scheduler.ui())
-                .subscribeWith(object : CallbackWrapper<List<EpisodeResponse>>() {
+        getDataManager()!!.getShowDetail(id)!!.subscribeOn(scheduler.io()).observeOn(scheduler.ui())
+                .subscribeWith(object : CallbackWrapper<ShowResponse>() {
 
-                    override fun onSuccess(episodeListResponse: List<EpisodeResponse>) {
+                    override fun onSuccess(showResponse: ShowResponse) {
                         // dismiss the progress bar
                         getMvpView()!!.hideLoading()
 
                         // send back result to activity
-                        getMvpView()!!.onEpisodeResult(episodeListResponse)
+                        getMvpView()!!.onShowResult(showResponse)
                     }
 
                     override fun onError(error: Any) {
@@ -34,5 +34,4 @@ class EpisodePresenter<V : EpisodesMvpView> @Inject constructor(private val dm: 
                     }
                 })
     }
-
 }

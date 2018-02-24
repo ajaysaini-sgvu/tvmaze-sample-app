@@ -7,9 +7,9 @@
     <!-- Episodes detail screen strings -->
     <string name="episode_detail_show_detail_btn">Show Details</string>
     <string name="episode_detail_no_summary">We do not have a summary for Episode 06 yet. Hang in there, or go ahead and contribute one.</string>
-    
+
     <!-- General strings -->
     <string name="something_went_wrong">Oops! Something went wrong</string>
-    
+
 
 </resources>

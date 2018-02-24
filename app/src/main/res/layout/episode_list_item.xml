@@ -17,8 +17,7 @@
             android:id="@+id/episode_number_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/release_date_text"

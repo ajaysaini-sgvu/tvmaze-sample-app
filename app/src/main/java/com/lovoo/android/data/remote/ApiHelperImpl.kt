@@ -25,5 +25,4 @@ class ApiHelperImpl @Inject constructor(private val restApi: RestApi) : ApiHelpe
 
     override fun getEpisodeList(id: Int): Observable<List<EpisodeResponse>>? = restApi.getEpisodeList(id)
     override fun getShowDetail(id: Int): Observable<ShowResponse>? = restApi.getShowDetail(id)
-
 }

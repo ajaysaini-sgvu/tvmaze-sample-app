@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.episodedetail.EpisodeDetailActivity"></activity>
+        <activity android:name=".ui.episodedetail.EpisodeDetailActivity" />
+        <activity android:name=".ui.show.ShowActivity"></activity>
     </application>
 
 </manifest>
