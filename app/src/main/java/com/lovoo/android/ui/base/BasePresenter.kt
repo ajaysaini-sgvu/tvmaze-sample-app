@@ -20,6 +20,7 @@ open class BasePresenter<V : MvpView> constructor(private val dm: DataManager, s
     fun getMvpView(): V? = mMvpView
 
     override fun handleApiError(error: Any) {
+        mMvpView?.onError(error as String)
     }
 
 }

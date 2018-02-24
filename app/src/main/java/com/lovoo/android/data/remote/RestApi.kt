@@ -28,5 +28,5 @@ interface RestApi {
     fun getEpisodeList(@Path("id") id: Int?): Observable<List<EpisodeResponse>>
 
     @GET("/shows/{id}")
-    fun getShowDetail(@Path("id") id: Int?) : Observable<ShowResponse>
+    fun getShowDetail(@Path("id") id: Int?): Observable<ShowResponse>
 }

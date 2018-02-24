@@ -4,5 +4,9 @@ import com.lovoo.android.data.model.episode.EpisodeResponse
 import com.lovoo.android.ui.base.MvpView
 
 interface EpisodesMvpView : MvpView {
-    fun onEpisodeResult(episodeResponse: List<EpisodeResponse>)
+
+    /**
+     * Calls when application receives a list of episodes.
+     */
+    fun onEpisodeResult(episodes: List<EpisodeResponse>)
 }
