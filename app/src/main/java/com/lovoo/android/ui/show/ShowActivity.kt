@@ -29,7 +29,7 @@ class ShowActivity : BaseActivity(), ShowMvpView {
     }
 
     override fun onShowResult(showResponse: ShowResponse) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
 }

@@ -41,6 +41,7 @@ class EpisodeActivity : BaseActivity(), EpisodesMvpView {
                 bundle.putParcelable("episode", episode)
                 intent.putExtra("myBundle", bundle)
                 startActivity(intent)
+
             }
         })
     }
