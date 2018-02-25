@@ -25,6 +25,15 @@
     <string name="episode_detail_show_detail_btn">Show Details</string>
     <string name="episode_detail_no_summary">We do not have a summary for Episode 06 yet. Hang in there, or go ahead and contribute one.</string>
 
+    <!-- Shows strings -->
+    <string name="show_streamed_on">Streamed on:&#160;</string>
+    <string name="show_runtime">Runtime:&#160;</string>
+    <string name="show_status">Status:&#160;</string>
+    <string name="show_type">Show Type:&#160;</string>
+    <string name="show_genres">Genres:&#160;</string>
+    <string name="show_official_sites">Official site:&#160;</string>
+    <string name="show_minutes">minutes</string>
+
     <!-- General strings -->
     <string name="something_went_wrong">Oops! Something went wrong</string>
 

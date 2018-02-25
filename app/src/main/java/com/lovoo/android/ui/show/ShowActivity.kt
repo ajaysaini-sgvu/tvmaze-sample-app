@@ -19,11 +19,13 @@ package com.lovoo.android.ui.show
 
 import android.os.Bundle
 import android.support.v4.view.ViewCompat
+import android.text.util.Linkify
 import android.view.MenuItem
 import com.lovoo.android.R
 import com.lovoo.android.data.model.show.ShowResponse
 import com.lovoo.android.ui.base.BaseActivity
 import kotlinx.android.synthetic.main.activity_show.*
+import kotlinx.android.synthetic.main.show_item.view.*
 import javax.inject.Inject
 
 /**
@@ -51,7 +53,7 @@ class ShowActivity : BaseActivity(), ShowMvpView {
         mShowMvpPresenter.onAttach(this)
 
         // fetch the show detail
-        mShowMvpPresenter.loadShow(30634)
+        mShowMvpPresenter.loadShow(resources.getInteger(R.integer.show_id))
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -65,7 +67,25 @@ class ShowActivity : BaseActivity(), ShowMvpView {
     }
 
     override fun onShowResult(showResponse: ShowResponse) {
+        // set the title of the toolbar
+        toolbar.title = showResponse.name
 
+        // set the title text
+        streamed_on_layout.title_text.text = getString(R.string.show_streamed_on)
+        runtime_layout.title_text.text = getString(R.string.show_runtime)
+        status_layout.title_text.text = getString(R.string.show_status)
+        show_type_layout.title_text.text = getString(R.string.show_type)
+        genres_layout.title_text.text = getString(R.string.show_genres)
+        official_site_layout.title_text.text = getString(R.string.show_official_sites)
+
+        // set the text values
+        streamed_on_layout.title_value_text.text = showResponse.webChannel?.name
+        runtime_layout.title_value_text.text = "${showResponse.runtime} ${getString(R.string.show_minutes)}"
+        status_layout.title_value_text.text = showResponse.status
+        show_type_layout.title_value_text.text = showResponse.type
+        genres_layout.title_value_text.text = showResponse.genres?.joinToString(",")
+        official_site_layout.title_value_text.text = showResponse.officialSite
+        Linkify.addLinks(official_site_layout.title_value_text, Linkify.WEB_URLS)
     }
 
 }

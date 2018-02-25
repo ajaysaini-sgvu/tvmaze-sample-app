@@ -19,6 +19,7 @@ package com.lovoo.android.presenter
 
 import com.lovoo.android.BuildConfig
 import com.lovoo.android.LovooApplication
+import com.lovoo.android.R
 import com.lovoo.android.data.DataManager
 import com.lovoo.android.data.model.episode.EpisodeResponse
 import com.lovoo.android.ui.episode.EpisodePresenter
@@ -33,6 +34,7 @@ import org.junit.runner.RunWith
 import org.mockito.Mockito.*
 import org.mockito.MockitoAnnotations
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.RuntimeEnvironment
 import org.robolectric.annotation.Config
 import java.util.*
 
@@ -65,9 +67,9 @@ class EpisodePresenterTest {
 
         doReturn(Observable.just(Arrays.asList(mockedResponse)))
                 .`when`(dataManager)
-                .getEpisodeList(30634)
+                .getEpisodeList(RuntimeEnvironment.application.resources.getInteger(R.integer.show_id))
 
-        mEpisodePresenter.loadEpisode(30634)
+        mEpisodePresenter.loadEpisode(RuntimeEnvironment.application.resources.getInteger(R.integer.show_id))
 
         testScheduler.triggerActions()
 

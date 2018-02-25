@@ -46,8 +46,8 @@ class EpisodeActivity : BaseActivity(), EpisodesMvpView {
 
         mEpisodeMvpPresenter.onAttach(this)
 
-        // load the episodes of 30634 show
-        mEpisodeMvpPresenter.loadEpisode(30634)
+        // load the episodes of show
+        mEpisodeMvpPresenter.loadEpisode(resources.getInteger(R.integer.show_id))
     }
 
     override fun onEpisodeResult(episodes: List<EpisodeResponse>) {
